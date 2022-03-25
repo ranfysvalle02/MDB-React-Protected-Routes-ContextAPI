@@ -19,7 +19,7 @@ The projects goes for a minimalistic approach - providing only the absolute mini
 ## Getting Started
 
 What you will need:
-- Realm App (Realm App Id)
+- Realm App (Realm App Id) with Email/Pwd Auth enabled (demo@demo.com as the username/pwd)
 - Sample Dataset loaded into a cluster
 - GraphQL Endpoint configured for the sample movies collection
 
