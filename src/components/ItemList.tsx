@@ -1,9 +1,26 @@
 import * as React from "react";
+import DataTable from 'react-data-table-component';
 
 function ItemList() {
    const getMovies = () => `{ movies { _id rated title year } }`;
    const [items,setItems] = React.useState([]);
-
+   const columns = [
+      {
+          name: 'Title',
+          selector: row => row.title,
+          sortable:true,
+      },
+      {
+          name: 'Year',
+          selector: row => row.year,
+          sortable:true,
+      },
+      {
+         name: 'Rated',
+         selector: row => row.rated,
+         sortable:true,
+     },
+  ];
    React.useEffect(()=>{
       const options = {
          method: "post",
@@ -25,19 +42,15 @@ function ItemList() {
 
 
    },[])
+   const ExpandedComponent = ({ data }) => <pre>{JSON.stringify(data, null, 2)}</pre>;
 
 
    return (
       <div className="itemlist-section">
          <h5>ItemList Component</h5>
-         <ul style={{listStyle:"none",maxHeight:"20em",overflowY:"scroll"}}>
-            {items.map((item, index) => (
-               <li key={index}>
-                  <span>{item.title}</span>(<b>{item.year}</b>) &nbsp; 
-                  <i>{item.rated}</i>
-               </li>
-            ))}
-         </ul>
+         <DataTable
+            columns={columns}
+            data={items} pagination expandableRows expandableRowsComponent={ExpandedComponent} />
       </div>
    );
 }

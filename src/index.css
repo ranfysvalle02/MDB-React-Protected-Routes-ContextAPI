@@ -36,11 +36,16 @@ body{
 .navbar a{
   display: block;
 }
-.auth-status-content,.feed-content,.home-content,.about-content{
+.auth-status-content,.home-content,.about-content{
   padding-top:4em;
   text-shadow:
         0.15em 0 black,
         0 0.15em black,
         -0.15em 0 black,
         0 -0.15em black;
+}
+.feed-content{
+  width:80%;
+  margin: 0 auto;
+  padding-bottom:10em;
 }
