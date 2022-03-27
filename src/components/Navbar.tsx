@@ -7,8 +7,8 @@ function Navbar() {
          <Link to={"/"}>
             Home (Public)
          </Link>
-         <Link to={"/about"}>
-            About (Public)
+         <Link to={"/NFC"}>
+            NFC (Public)
          </Link>
          <Link to={"/feed"}>
             Feed (Protected)

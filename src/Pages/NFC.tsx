@@ -1,12 +1,12 @@
 import React from "react";
 import { useNFC } from "../hooks/useNFC";
 
-function About() {
+function NFC() {
 
    const {scan,serialNumber} = useNFC();
 
    return (
-      <div className="about-content">
+      <div className="nfc-content">
          <p>This is another public route.</p>
          <hr />
          <button type="button" onClick={scan}>scan nfc</button>
@@ -16,4 +16,4 @@ function About() {
    );
 }
 
-export default About;
+export default NFC;

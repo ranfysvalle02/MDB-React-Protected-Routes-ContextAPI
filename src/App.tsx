@@ -9,7 +9,7 @@ import Home from "./Pages/Home";
 import Feed from "./Pages/Feed";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { useAuth } from "./hooks/useAuth";
-import About from "./Pages/About";
+import NFC from "./Pages/NFC";
 
 function App() {
    const { authed, loading } = useAuth();
@@ -31,7 +31,7 @@ function App() {
 
                <Switch>
                   <Route path="/" exact component={Home} />
-                  <Route path="/about" exact component={About} />
+                  <Route path="/NFC" exact component={NFC} />
                   <ProtectedRoute path="/feed" exact component={Feed} />
                </Switch>
             </>
