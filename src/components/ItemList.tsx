@@ -1,5 +1,18 @@
 import * as React from "react";
 import DataTable from 'react-data-table-component';
+import "@google/model-viewer";
+
+declare global {
+   namespace JSX {
+      interface IntrinsicElements {
+         'model-viewer': ModelViewerJSX & React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> ;
+      }
+   }
+}
+ 
+ interface ModelViewerJSX {
+   src: string
+}
 
 function ItemList() {
    const getAvatars = () => `{ avatars { _id display_name glb } }`;
@@ -41,8 +54,21 @@ function ItemList() {
    },[])
    const ExpandedComponent = ({ data }) => {
       const [ctext,setctext] = React.useState(JSON.stringify(data, null, 2));
+      let x = JSON.parse(ctext);
 
       return <div>
+         <model-viewer
+                  style={{
+                     width:"75%",margin:"0 auto"
+                  }}
+                  id="viewer"
+                  src={x.glb}
+                  ios-src={x.glb}
+                  auto-rotate
+                  camera-controls
+                  ar-modes="webxr scene-viewer quick-look"
+                  xr-environment
+            ></model-viewer>
          <button type="button" onClick={()=>{
             let newData = JSON.parse(ctext);
             const updateAvatar = () => `mutation { updateOneAvatar(query:{ _id:"${data._id}" },set:{ display_name:"${newData.display_name}", glb:"${newData.glb}" }) { _id display_name glb partition_id } }`;
