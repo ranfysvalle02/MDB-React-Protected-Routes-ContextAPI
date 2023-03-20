@@ -1,11 +1,15 @@
 # MDB-React-Protected-Routes-ContextAPI
-## _Realm App Services + React + Ready Player Me Starter Kit_
+## Atlas App Services + React + GraphQL Starter Kit
 
 # LIVE DEMO 
-https://react-protected-contextapi-vbtsc.mongodbstitch.com/
+https://mdb-react-context-spfnd.mongodbstitch.com/
 
 # Inspired by 
 Blog Post: https://www.jeffedmondson.dev/blog/react-protected-routes/
+
+# Icons
+
+https://marella.me/material-icons/demo/
 
 This project is meant to be a good starting point for everything from a hackathon, to a production-ready project. Most templates or starter kits are very opinionated, and force you to do things in their pre-determined structure. This template seeks to do the opposite. 
 
@@ -18,7 +22,7 @@ The project includes bits of functionality that I've struggled in the past integ
 - Flexibility to style/design the UI/UX as desired
 - No need to re-code, worry about Authentication and securing routes
 - GraphQL communication without Apollo client (CRUD)
-- Avatar Generation 
+- Avatar View (Movel-Viewer/3D objects) 
 
 ## Getting Started
 

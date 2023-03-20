@@ -21,39 +21,19 @@ body{
   letter-spacing: 0.25em;
 }
 
-.navbar a {
-  background-color: #00ED64;
-  color: black;
-  margin: 5px;
-  padding: 1em .5em;
-  text-decoration: none;
-  text-transform: uppercase;
+
+.home-content{
+  width:90%;
+  margin: 0 auto;
+  margin-top:2em;
 }
-.navbar a{
-  display: inline-block;
-  width: 22%;
-}
-.auth-status-content,.home-content,.nfc-content{
-  padding-top:.25em;
-  text-shadow:
-        0.15em 0 black,
-        0 0.15em black,
-        -0.15em 0 black,
-        0 -0.15em black;
+.about-content{
+  width:90%;
+  margin: 0 auto;
+  margin-top:6em;
 }
 .feed-content{
-  width:80%;
+  width:90%;
   margin: 0 auto;
-  padding-bottom:10em;
-}
-
-.frame {
-  width: 1080px;
-  height: 800px;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
-    Droid Sans, Helvetica Neue, sans-serif;
-  padding: 20px;
-  font-size: 14px;
-  border: none;
+  margin-top:6em;
 }

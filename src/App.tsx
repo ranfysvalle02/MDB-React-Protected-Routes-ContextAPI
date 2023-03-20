@@ -1,38 +1,33 @@
 import React from "react";
 import "./App.css";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import 'material-icons/iconfont/material-icons.css';
+
 import { Switch, Route } from "react-router-dom";
 
-import Login from "./components/Login";
-import Logout from "./components/Logout";
-import Navbar from "./components/Navbar";
+import Navigation from "./components/Navigation";
 import Home from "./Pages/Home";
 import Feed from "./Pages/Feed";
+import About from "./Pages/About";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { useAuth } from "./hooks/useAuth";
-import NFC from "./Pages/NFC";
 
 function App() {
    const { authed, loading } = useAuth();
 
    return (
       <div className="App">
-         <Navbar />
-         {authed ? <Logout /> : <Login />}
+         <Navigation />
 
          {loading ? (
             <div> Loading... </div>
          ) : (
             <>
-               <div className="auth-status-content">
-                  <span>
-                     Auth Status: {authed ? "Logged In" : "Not Logged In"}
-                  </span>
-               </div>
-
+               
                <Switch>
                   <Route path="/" exact component={Home} />
-                  <Route path="/NFC" exact component={NFC} />
                   <ProtectedRoute path="/feed" exact component={Feed} />
+                  <Route path="/about" exact component={About} />
                </Switch>
             </>
          )}

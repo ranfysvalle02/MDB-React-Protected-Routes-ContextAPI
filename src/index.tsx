@@ -6,15 +6,12 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 
 import { AuthProvider } from "./hooks/useAuth";
-import { NFCProvider } from "./hooks/useNFC";
 
 ReactDOM.render(
    <React.StrictMode>
       <BrowserRouter>
          <AuthProvider>
-            <NFCProvider>
-               <App />
-            </NFCProvider>
+            <App />
          </AuthProvider>
       </BrowserRouter>
    </React.StrictMode>,

@@ -17,7 +17,10 @@ declare global {
 function ItemList() {
    const getAvatars = () => `{ avatars { _id display_name glb } }`;
    
-   const [items,setItems] = React.useState([]);
+   const [items,setItems] = React.useState([{
+      "display_name":"DEMO DISPLAY NAME",
+      "glb":"https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb"
+   }]);
    const columns = [
       {
           name: 'Display Name',

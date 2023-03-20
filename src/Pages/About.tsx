@@ -3,13 +3,13 @@ import ItemList from "../components/ItemList";
 
 import Alert from 'react-bootstrap/Alert';
 
-function Feed() {
+function About() {
    return (
-      <div className="feed-content">
+      <div className="about-content">
         <Alert show={true} variant="success" >
-            <Alert.Heading>FEED (PROTECTED)</Alert.Heading>
+            <Alert.Heading>ABOUT</Alert.Heading>
             <p>
-                Lorem ipsum.
+                Signing up for D3M0 is simple, and best of all - FREE
             </p>
         </Alert>
         <hr />
@@ -18,4 +18,4 @@ function Feed() {
    );
 }
 
-export default Feed;
+export default About;
