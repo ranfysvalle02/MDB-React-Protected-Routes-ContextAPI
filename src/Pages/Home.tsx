@@ -23,8 +23,7 @@ function Home() {
    };
 
    return <div className="home-content">
-            <p>This is another public route. Please login to save your avatar to our public collection.</p>
-            <hr />
+            
             <div>
                <Alert show={true} variant="success" >
                   <Alert.Heading>{!authed?"Don't have an account?! Sign up now!":"Welcome friend."}</Alert.Heading>
