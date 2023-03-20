@@ -78,7 +78,7 @@ function Home() {
                      </Col>
                      <Col>
                         <Card>
-                           <Card.Img variant="top" src="https://images.unsplash.com/photo-1489367874814-f5d040621dd8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2292&q=80" />
+                           <Card.Img variant="top" src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80" />
                            <Card.Body>
                            <Card.Title>Box C</Card.Title>
                            <Card.Text>
